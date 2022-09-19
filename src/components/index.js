@@ -6,3 +6,5 @@ export { default as ChannelDetails } from './ChannelDetails';
 export { default as SearchBar } from './SearchBar';
 export { default as Slidebar } from './SideBar';
 export { default as Video } from './Videos';
+export { default as VideoCard } from './VideoCard';
+export { default as ChannelCard } from './ChannelCard';
