@@ -5,8 +5,9 @@ import ChannelCard from './ChannelCard';
 import VideoCard from './VideoCard';
 import  Loader from './Loader'
 
+// marginLeft={margin || '2%' }
 
-const Videos = ({videos,direction}) => {
+const Videos = ({videos,direction,justifyContent}) => {
     console.log(videos);
 
     if(!videos?.length) return <Loader />
@@ -14,7 +15,7 @@ const Videos = ({videos,direction}) => {
   return (
 
   
-    <Stack direction={ direction ||'row' } flexWrap="wrap" justifyContent="start" gap={2}>
+    <Stack justifyContent={ justifyContent  || "start"}  direction={ direction ||'row' } flexWrap="wrap"  gap={2}>
         {videos.map((item,id)=>(
             <Box key={id}>
               {item.id.videoId && <VideoCard video={item} />}

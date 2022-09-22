@@ -7,6 +7,8 @@ import { Video } from "./index";
 import { fetchFromAPI } from "../utils/fetchDataFromAPI";
 import { useParams } from "react-router-dom";
 
+
+
 const SearchFeed = () => {
   
   const [videos, setVideos] = useState([]);
@@ -30,7 +32,7 @@ const SearchFeed = () => {
       Search Results for : <span style={{ color: "#F31505" }}>{searchTerm}</span>
       videos
     </Typography>
-    <Video videos={videos} />
+    <Video videos={videos} justifyContent='space-around' />
   </Box>
   );
 };
