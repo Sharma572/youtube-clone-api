@@ -5,14 +5,15 @@ import ChannelCard from './ChannelCard';
 import VideoCard from './VideoCard';
 
 
-const Videos = ({videos}) => {
+const Videos = ({videos,direction}) => {
     console.log(videos);
-   
+
+    if(!videos?.length) return 'Loading...'
 
   return (
 
   
-    <Stack direction='row' flexWrap="wrap" justifyContent="start" gap={2}>
+    <Stack direction={ direction ||'row' } flexWrap="wrap" justifyContent="start" gap={2}>
         {videos.map((item,id)=>(
             <Box key={id}>
               {item.id.videoId && <VideoCard video={item} />}
