@@ -6,6 +6,7 @@ import ReactPlayer from "react-player"
 import { Link, useParams } from "react-router-dom"
 
 import {Video} from './'
+import  Loader from './Loader'
 import {fetchFromAPI} from '../utils/fetchDataFromAPI'
 
 const VideoDetails = () => {
@@ -22,7 +23,7 @@ const [videos, setvideos] = useState(null)
     .then((data)=> setvideos(data.items))
   }, [id]);
 
-  if (!videoDetail?.snippet) return 'Loading...'
+  if (!videoDetail?.snippet) return <Loader />
   
   // snippet and statistics are being destructured 
   const { snippet: { title, channelId, channelTitle }, statistics: { viewCount, likeCount } } = videoDetail;

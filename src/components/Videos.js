@@ -3,12 +3,13 @@ import { Box, Container, display, Stack } from '@mui/system';
 import React from 'react'
 import ChannelCard from './ChannelCard';
 import VideoCard from './VideoCard';
+import  Loader from './Loader'
 
 
 const Videos = ({videos,direction}) => {
     console.log(videos);
 
-    if(!videos?.length) return 'Loading...'
+    if(!videos?.length) return <Loader />
 
   return (
 
